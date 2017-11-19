@@ -1,0 +1,160 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:psnee-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "PSNee[t]"
+Date "2017-11-02"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GND #PWR01
+U 1 1 59F4F857
+P 8050 4000
+F 0 "#PWR01" H 8050 3750 50  0001 C CNN
+F 1 "GND" H 8050 3850 50  0000 C CNN
+F 2 "" H 8050 4000 50  0000 C CNN
+F 3 "" H 8050 4000 50  0000 C CNN
+	1    8050 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X03 P1
+U 1 1 59F50479
+P 4200 2850
+F 0 "P1" H 4200 3050 50  0000 C CNN
+F 1 "CONN_ICSP" H 4200 2650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03" H 4200 1650 50  0000 C CNN
+F 3 "" H 4200 1650 50  0000 C CNN
+	1    4200 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D1
+U 1 1 59F51343
+P 7750 3400
+F 0 "D1" H 7750 3500 50  0000 C CNN
+F 1 "D" H 7750 3300 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 7750 3400 50  0001 C CNN
+F 3 "" H 7750 3400 50  0000 C CNN
+	1    7750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR02
+U 1 1 59F5217C
+P 8050 3300
+F 0 "#PWR02" H 8050 3150 50  0001 C CNN
+F 1 "VCC" H 8050 3450 50  0000 C CNN
+F 2 "" H 8050 3300 50  0000 C CNN
+F 3 "" H 8050 3300 50  0000 C CNN
+	1    8050 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ATTINY45-P IC1
+U 1 1 59F4F569
+P 6000 3650
+F 0 "IC1" H 4850 4050 50  0000 C CNN
+F 1 "ATTINY45" H 7000 3250 50  0000 C CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm_LongPads" H 7000 3650 50  0000 C CIN
+F 3 "" H 6000 3650 50  0000 C CNN
+	1    6000 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3400 7600 3400
+Wire Wire Line
+	7350 3900 8050 3900
+Wire Wire Line
+	3150 3500 4650 3500
+Wire Wire Line
+	3150 3600 4650 3600
+Wire Wire Line
+	3150 3400 4650 3400
+Wire Wire Line
+	3950 2950 3950 3900
+Wire Wire Line
+	3950 3900 4650 3900
+Wire Wire Line
+	4450 2950 7400 2950
+Wire Wire Line
+	7400 2950 7400 3900
+Connection ~ 7400 3900
+Wire Wire Line
+	4450 2750 7500 2750
+Wire Wire Line
+	7500 2750 7500 3400
+Connection ~ 7500 3400
+Wire Wire Line
+	3950 2850 3850 2850
+Wire Wire Line
+	3850 2850 3850 3600
+Connection ~ 3850 3600
+Wire Wire Line
+	3950 2750 3750 2750
+Wire Wire Line
+	3750 2750 3750 3500
+Connection ~ 3750 3500
+Wire Wire Line
+	4450 2850 4550 2850
+Wire Wire Line
+	4550 2850 4550 3400
+Connection ~ 4550 3400
+Text Label 3150 3400 0    60   ~ 0
+data
+Text Label 3150 3500 0    60   ~ 0
+gate
+Text Label 3150 3600 0    60   ~ 0
+lid
+Text Label 3150 3700 0    60   ~ 0
+biosA18
+Text Label 3150 3800 0    60   ~ 0
+biosD2
+Wire Wire Line
+	8050 3900 8050 4000
+Wire Wire Line
+	4650 3700 3150 3700
+Wire Wire Line
+	4650 3800 3150 3800
+Wire Wire Line
+	7900 3400 8050 3400
+Wire Wire Line
+	8050 3400 8050 3300
+$EndSCHEMATC
